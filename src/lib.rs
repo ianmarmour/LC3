@@ -8,6 +8,7 @@
 mod bitstream;
 mod config;
 mod error;
+mod mdct;
 mod sample;
 
 pub use config::{
