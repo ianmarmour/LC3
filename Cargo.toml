@@ -1,0 +1,29 @@
+[package]
+name = "lc3"
+version = "0.1.0"
+edition = "2024"
+rust-version = "1.85"
+license = "MIT"
+description = "A no_std implementation of the Bluetooth Low Complexity Communication Codec (LC3)"
+repository = "https://github.com/ianmarmour/LC3"
+readme = "README.md"
+keywords = ["lc3", "codec", "audio", "bluetooth", "no_std"]
+categories = ["multimedia::audio", "no-std", "embedded"]
+exclude = ["docs/", "third_party/", "conformance/"]
+
+[features]
+# Command line encoder and decoder (the `lc3` binary), requires `std`.
+cli = ["dep:tracing", "dep:tracing-subscriber"]
+
+[dependencies]
+libm = "0.2"
+tracing = { version = "0.1", default-features = false, features = ["std"], optional = true }
+tracing-subscriber = { version = "0.3", default-features = false, features = ["fmt", "std"], optional = true }
+
+[[bin]]
+name = "lc3"
+path = "src/main.rs"
+required-features = ["cli"]
+
+[profile.test]
+opt-level = 2
