@@ -7,6 +7,7 @@
 
 mod bitstream;
 mod config;
+mod encoder;
 mod error;
 mod ltpf;
 mod math;
@@ -21,5 +22,6 @@ mod tns;
 pub use config::{
     Config, FrameDuration, MAX_FRAME_BYTES, MAX_FRAME_SAMPLES, MIN_FRAME_BYTES, SampleRate,
 };
+pub use encoder::Encoder;
 pub use error::Error;
 pub use sample::{I24, Sample};
