@@ -5,9 +5,11 @@
 //! quantization noise between the harmonics.
 
 mod analysis;
+mod synthesis;
 mod tables;
 
 pub(crate) use analysis::Analysis;
+pub(crate) use synthesis::Synthesis;
 
 use crate::bitstream::{Reader, Writer};
 use crate::config::{Config, FrameDuration};
