@@ -8,6 +8,7 @@
 mod bitstream;
 mod config;
 mod error;
+mod ltpf;
 mod math;
 mod mdct;
 mod sample;
