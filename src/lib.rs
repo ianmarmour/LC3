@@ -8,11 +8,13 @@
 mod bitstream;
 mod config;
 mod error;
+mod math;
 mod mdct;
 mod sample;
 mod sns;
 #[cfg(test)]
 mod test_vectors;
+mod tns;
 
 pub use config::{
     Config, FrameDuration, MAX_FRAME_BYTES, MAX_FRAME_SAMPLES, MIN_FRAME_BYTES, SampleRate,
