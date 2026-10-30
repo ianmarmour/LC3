@@ -11,8 +11,19 @@ keywords = ["lc3", "codec", "audio", "bluetooth", "no_std"]
 categories = ["multimedia::audio", "no-std", "embedded"]
 exclude = ["docs/", "third_party/"]
 
+[features]
+# Command line encoder and decoder (the `lc3` binary), requires `std`.
+cli = ["dep:tracing", "dep:tracing-subscriber"]
+
 [dependencies]
 libm = "0.2"
+tracing = { version = "0.1", default-features = false, features = ["std"], optional = true }
+tracing-subscriber = { version = "0.3", default-features = false, features = ["fmt", "std"], optional = true }
+
+[[bin]]
+name = "lc3"
+path = "src/main.rs"
+required-features = ["cli"]
 
 [profile.test]
 opt-level = 2
