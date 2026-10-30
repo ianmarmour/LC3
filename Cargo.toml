@@ -1,0 +1,18 @@
+[package]
+name = "lc3"
+version = "0.1.0"
+edition = "2024"
+rust-version = "1.85"
+license = "MIT"
+description = "A no_std implementation of the Bluetooth Low Complexity Communication Codec (LC3)"
+repository = "https://github.com/ianmarmour/LC3"
+readme = "README.md"
+keywords = ["lc3", "codec", "audio", "bluetooth", "no_std"]
+categories = ["multimedia::audio", "no-std", "embedded"]
+exclude = ["docs/", "third_party/"]
+
+[dependencies]
+libm = "0.2"
+
+[profile.test]
+opt-level = 2

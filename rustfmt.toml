@@ -1,0 +1,2 @@
+# Pack the numeric tables of the specification several values per line.
+short_array_element_width_threshold = 24
