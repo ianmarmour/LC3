@@ -13,6 +13,7 @@ mod math;
 mod mdct;
 mod sample;
 mod sns;
+mod spectrum;
 #[cfg(test)]
 mod test_vectors;
 mod tns;
