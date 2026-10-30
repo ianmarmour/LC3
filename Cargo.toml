@@ -9,7 +9,7 @@ repository = "https://github.com/ianmarmour/LC3"
 readme = "README.md"
 keywords = ["lc3", "codec", "audio", "bluetooth", "no_std"]
 categories = ["multimedia::audio", "no-std", "embedded"]
-exclude = ["docs/", "third_party/"]
+exclude = ["docs/", "third_party/", "conformance/"]
 
 [features]
 # Command line encoder and decoder (the `lc3` binary), requires `std`.
