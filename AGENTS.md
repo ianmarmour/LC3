@@ -43,3 +43,8 @@ conformant implementation of the LC3 codec in Rust.
 - Keep changes small and focused, with meaningful commit messages.
 - Don't add features or refactor unrelated code as part of a change.
 - Keep pull requests under 2000 lines of code when possible.
+- Author and commit every change as the maintainer,
+  `Ian Armour <ianmarmour@gmail.com>`, set with `git config user.name` and
+  `git config user.email`. Agents must never commit under their own identity.
+- Every pull request description must include an easy-to-read, bulleted list
+  of the changes it makes.
